@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+ 
+  box-sizing: border-box;
+}
+
+
+
+
+::-webkit-scrollbar {
+  height: 8px; /* висота горизонтального скрола */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* фон треку */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4); /* колір бігунка */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
