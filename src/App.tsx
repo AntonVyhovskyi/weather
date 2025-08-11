@@ -90,9 +90,12 @@ function App() {
   }, [])
 
   return (
-    <div className='w-full min-h-screen'>
-    { weatherData? <WeatherContainerComponent weatherResponse={weatherData} city={city} /> : ''}
-      
+    <div className="w-full min-h-screen">
+      {loading && <p className="text-white text-xl">Loading...</p>}
+      {error && <p className="text-red-500 text-xl">Error loading data</p>}
+      {!loading && !error && weatherData && (
+        <WeatherContainerComponent weatherResponse={weatherData} city={city} />
+      )}
     </div>
 
 

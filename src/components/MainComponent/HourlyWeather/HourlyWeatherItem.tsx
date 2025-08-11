@@ -9,7 +9,7 @@ interface HourlyWeatherItemProps {
     nowAM: number
 }
 
-const HourlyWeatherItem: FunctionComponent<HourlyWeatherItemProps> = ({ ind, weathercode, time, temperature_2m, nowAM}) => {
+const HourlyWeatherItem: FunctionComponent<HourlyWeatherItemProps> = ({ weathercode, time, temperature_2m, nowAM}) => {
     const am = new Date(time).getHours()
     return (
         <div className={`flex flex-col items-center gap-3 border border-white rounded-xl  text-white p-6 min-w-[100px]
